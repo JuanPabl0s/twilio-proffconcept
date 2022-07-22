@@ -1,0 +1,99 @@
+{
+	"info": {
+		"_postman_id": "cd15124f-d29b-4afa-aec1-1c1d3edca6c1",
+		"name": "Twilio",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Call outbound",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"from\":\"+19705729418\",\n    \"to\":\"+56957199849\",\n    \"voiceMessageURI\":\"http://demo.twilio.com/docs/voice.xml\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1/caller/call",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"caller",
+						"call"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Email Sender",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"from\":\"juan_rivera@unicomer.com\",\n    \"subject\":\"Email Thursday Last\",\n    \"to\":\"juanpablo.riffo@gmail.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1/mail/send",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"mail",
+						"send"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SMS Sender",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"phoneNumber\": \"+56957199849\",\n    \"message\": \"Text message test Elliots\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1/sms/send",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"sms",
+						"send"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
