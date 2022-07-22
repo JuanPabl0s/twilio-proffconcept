@@ -1,0 +1,7 @@
+twilio:
+  account_sid: ACe4b688a20b1570ebc452cd65cc52e04e
+  auth_token: 5f0ad3e95f8bb7ad0eb60add6289ca65
+  phoneNumber: +19705729418
+
+sendgrid:
+  api_key: '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'
