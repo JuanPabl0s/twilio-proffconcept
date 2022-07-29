@@ -1,4 +1,4 @@
-package com.emma.twilio.service.imp;
+package com.emma.twilio.service.impl;
 
 import java.net.URI;
 import java.net.URISyntaxException;

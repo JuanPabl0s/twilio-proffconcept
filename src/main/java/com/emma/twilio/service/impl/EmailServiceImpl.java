@@ -1,4 +1,4 @@
-package com.emma.twilio.service.imp;
+package com.emma.twilio.service.impl;
 
 import com.emma.twilio.configuration.SendGridConfiguration;
 import com.emma.twilio.request.MailRequest;
@@ -10,6 +10,7 @@ import com.sendgrid.SendGrid;
 import com.sendgrid.helpers.mail.Mail;
 import com.sendgrid.helpers.mail.objects.Content;
 import com.sendgrid.helpers.mail.objects.Email;
+import com.twilio.exception.TwilioException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -40,10 +41,10 @@ public class EmailServiceImpl implements EmailService {
             request.setBody(mail.build());
             Response response = sendGrid.api(request);
             log.info("[SERVICE] - Email successfully sent to {}" + from);
-        } catch (Exception e) {
+        } catch (TwilioException e) {
 
             log.error("[SERVICE] - Error sending email");
-            throw e;
+             e.getStackTrace();
         }
     }
 

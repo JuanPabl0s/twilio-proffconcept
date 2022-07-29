@@ -1,4 +1,4 @@
-package com.emma.twilio.service.imp;
+package com.emma.twilio.service.impl;
 
 import com.emma.twilio.request.SMSRequest;
 import com.emma.twilio.service.SenderSMS;

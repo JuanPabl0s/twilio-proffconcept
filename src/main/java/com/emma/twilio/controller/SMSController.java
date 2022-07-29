@@ -2,7 +2,6 @@ package com.emma.twilio.controller;
 
 import com.emma.twilio.request.SMSRequest;
 import com.emma.twilio.service.SenderSMS;
-import com.emma.twilio.service.imp.TwilioSMSSender;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
